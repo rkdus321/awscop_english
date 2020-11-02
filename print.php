@@ -1,5 +1,5 @@
 <?php
-	$conn=mysqli_connect('localhost','pjuser','1234','awscop');
+	$conn=mysqli_connect('localhost','pjuser','12345678','awscop');
 ?>
 <!DOCTYPE html>
 <html>
