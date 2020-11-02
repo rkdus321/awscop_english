@@ -1,5 +1,5 @@
 <?php
-	$conn=mysqli_connect('localhost','root','9701hong','awscop');
+	$conn=mysqli_connect('localhost','pj-user','1234','awscop');
 
 	$basic=$_POST['basic'];
 	$extra=$_POST['extra'];
@@ -24,7 +24,7 @@
 	);
 
 	$sql="
-		INSERT INTO 월급관리 (이름, 직급, 기본급, 수당, 세율, 월급)
+		INSERT INTO employee_salary (name, position, base_pay, extra_pay, tax_rate, salary)
 		VALUES (
 			'{$filtered['name']}',
 			'{$filtered['rank']}',
@@ -51,25 +51,25 @@
 			<a href="index.php"><img src="images/logo.png" alt="LOGO"></a>
 		</div><!--logo-->
 		<ul id="navigation">
-			<li><a href="create.php">신규등록</a></li>
-			<li><a href="print.php">조회/수정</a></li>
+			<li><a href="create.php">Resistration</a></li>
+			<li><a href="print.php">View/Modify</a></li>
 		</ul><!--navigation-->
 	</div><!--header-->
 	<div id="contents">
 		<?php
 			$result=mysqli_query($conn, $sql);
 			if($result === false) {
-				echo '글 등록 오류가 발생하였습니다. 관리자에게 문의하세요.';
+				echo 'A post registration error has occurred. Please contact your administrator.';
     			echo error_log(mysqli_error($conn));
 			} else {
-    			echo '정상적으로 등록되었습니다.<br><a href="index.php">메인 페이지로 돌아가기</a>';
+    			header('Location: index.php');
 			}
 		?>
 	</div><!--contents-->
 	<div id="footer">
 		<div id="links">
 			<li>
-				<h4>홈페이지 이상 시</h4>
+				<h4>When Something Wrong</h4>
 				<ul>
 					<li>TEL : 0212345678</li>
 					<li>E-MAIL : aws123@gmail.com</li>

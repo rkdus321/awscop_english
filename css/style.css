@@ -11,8 +11,12 @@ body {
 }
 
 #header {
+	background: #ff9d1c;
+	width: 100%;
 	margin-bottom: 30px;
 	text-align: center;
+	position: fixed;
+	top: 0;
 }
 
 #logo {
@@ -31,7 +35,7 @@ body {
 #navigation li {
 	float: left;
 	height: 60px;
-	width: 160px;
+	width: 250px;
 }
 
 #navigation li a {
@@ -101,6 +105,7 @@ body {
 #contents {
 	display: inline-block;
 	width: 100%;
+	margin-top: 100px;
 	margin-bottom: 300px;
 	color: #0a223d;
 }

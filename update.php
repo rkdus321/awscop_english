@@ -1,5 +1,5 @@
 <?php
-	$conn=mysqli_connect('localhost','root','9701hong','awscop');	
+	$conn=mysqli_connect('localhost','pj-user','1234','awscop');	
 
 	settype($_GET['id'], 'integer');
 	$a=$_GET['id'];
@@ -19,37 +19,37 @@
 			<a href="index.php"><img src="images/logo.png" alt="LOGO"></a>
 		</div><!--logo-->
 		<ul id="navigation">
-			<li><a href="create.php">신규등록</a></li>
-			<li><a href="print.php">조회/수정</a></li>
+			<li><a href="create.php">Resistration</a></li>
+			<li><a href="print.php">View/Modify</a></li>
 		</ul><!--navigation-->
 	</div><!--header-->
 	<div id="contents">
-		<p id="inputcenter">정보를 입력하시오</p>
+		<p id="inputcenter">Enter Information</p>
 		<?php
-			$sql="SELECT * FROM 월급관리 WHERE id=$a";
+			$sql="SELECT * FROM employee_salary WHERE id=$a";
 			$result=mysqli_query($conn, $sql);
 			$row = mysqli_fetch_array($result);
 			$filtered = array(
-	            '이름' => htmlspecialchars($row['이름']),
-	            '직급' => htmlspecialchars($row['직급']),
-	            '기본급' => htmlspecialchars($row['기본급']),
-	            '수당' => htmlspecialchars($row['수당'])
+	            'name' => htmlspecialchars($row['name']),
+			    'position' => htmlspecialchars($row['position']),
+			    'base' => htmlspecialchars($row['base_pay']),
+			    'extra' => htmlspecialchars($row['extra_pay'])
         	);
 		?>
 		<p>
 	  		<form id="inputcenter" action="update_process.php?id=<?php echo $_GET['id'] ?>" method="post">
-				<p><input type="text" name="name" placeholder="이름" value="<?= $filtered['이름'] ?>"></p>
-				<p><input type="text" name="rank" placeholder="직급" value="<?= $filtered['직급'] ?>"></p>
-				<p><input type="text" name="basic" placeholder="기본급" value="<?= $filtered['기본급'] ?>"></p>
-				<p><input type="text" name="extra" placeholder="수당" value="<?= $filtered['수당'] ?>"></p>
-				<p><input type="submit" value="수정"></p>
+				<p><input type="text" name="name" placeholder="Name" value="<?= $filtered['name'] ?>"></p>
+				<p><input type="text" name="position" placeholder="Position" value="<?= $filtered['position'] ?>"></p>
+				<p><input type="text" name="basic" placeholder="Base_Pay" value="<?= $filtered['base'] ?>"></p>
+				<p><input type="text" name="extra" placeholder="Extra_Pay" value="<?= $filtered['extra'] ?>"></p>
+				<p><input type="submit" value="edit"></p>
 			</form>
 		</p>
 	</div><!--contents-->
 	<div id="footer">
 		<div id="links">
 			<li>
-				<h4>홈페이지 이상 시</h4>
+				<h4>When Something Wrong</h4>
 				<ul>
 					<li>TEL : 0212345678</li>
 					<li>E-MAIL : aws123@gmail.com</li>

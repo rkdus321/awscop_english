@@ -13,18 +13,18 @@
 			<a href="index.php"><img src="images/logo.png" alt="LOGO"></a>
 		</div><!--logo-->
 		<ul id="navigation">
-			<li><a href="create.php">신규등록</a></li>
-			<li><a href="print.php">조회/수정</a></li>
+			<li><a href="create.php">Registration</a></li>
+			<li><a href="print.php">View/Modify</a></li>
 		</ul><!--navigation-->
 	</div><!--header-->
 	<div id="contents">
-		<h1>AWSCOP 월급관리 서비스</h1>
+		<h1>AWSCOP Salary Management Service</h1>
 		<img src="images/main.jpg">
 	</div><!--contents-->
 	<div id="footer">
 		<div id="links">
 			<li>
-				<h4>홈페이지 이상 시</h4>
+				<h4>When Something Wrong</h4>
 				<ul>
 					<li>TEL : 0212345678</li>
 					<li>E-MAIL : aws123@gmail.com</li>
