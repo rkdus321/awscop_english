@@ -26,7 +26,7 @@
 
 	$sql="
 		UPDATE employee_salary
-		SET name='{$filtered['name']}',position='{$filtered['rank']}',base_pay=$basic,extra_pay=$extra,tax_rate=$tax,salary=$salary
+		SET name='{$filtered['name']}',position='{$filtered['position']}',base_pay=$basic,extra_pay=$extra,tax_rate=$tax,salary=$salary
 		WHERE id='{$filtered['id']}';
 		"
 	;
