@@ -1,5 +1,5 @@
 <?php
-	$conn=mysqli_connect('localhost','pj-user','1234','awscop');	
+	$conn=mysqli_connect('localhost','pjuser','1234','awscop');	
 
 	settype($_GET['id'], 'integer');
 	$a=$_GET['id'];
