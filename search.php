@@ -59,7 +59,7 @@
 			    <td><?= $filtered['extra'] ?></td>
 			    <td><?= $filtered['tax'] ?></td>
 			    <td><?= $filtered['salary'] ?></td>
-			    <td><a href="update.php?id=<?php echo $filtered['id'] ?>">수정</a></td>
+			    <td><a href="update.php?id=<?php echo $filtered['id'] ?>">edit</a></td>
           		<td>
             		<form action="delete.php" method="post" onsubmit="if(!confirm('Sure?')){return false;}">
               			<input type="hidden" name="id" value="<?= $filtered['id'] ?>">
