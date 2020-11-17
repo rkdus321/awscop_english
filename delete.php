@@ -27,7 +27,7 @@
 			<a href="index.php"><img src="images/logo.png" alt="LOGO"></a>
 		</div><!--logo-->
 		<ul id="navigation">
-			<li><a href="create.php">Resistration</a></li>
+			<li><a href="create.php">Registration</a></li>
 			<li><a href="print.php">View/Modify</a></li>
 		</ul><!--navigation-->
 	</div><!--header-->
